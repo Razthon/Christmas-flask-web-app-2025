@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loading...</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: #0f0;
+            font-family: monospace;
+            flex-direction: column;
+        }
+
+        .spinner {
+            border: 6px solid #333;
+            border-top: 6px solid #0f0;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner"></div>
+    <h2>Processing...</h2>
+    <p>Please allow up to 2 hours for the site to load</p>
+        <p>If it takes longer, please refresh the page.</p>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "/final";
+        }, 30000);
+    </script>
+</body>
+</html>
